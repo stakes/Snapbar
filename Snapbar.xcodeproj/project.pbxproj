@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C85A37E825059347004832AE /* FileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85A37E725059347004832AE /* FileHandler.swift */; };
 		C88D3C36250429E300A67E0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88D3C35250429E300A67E0B /* AppDelegate.swift */; };
 		C88D3C38250429E300A67E0B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88D3C37250429E300A67E0B /* ContentView.swift */; };
 		C88D3C3A250429E400A67E0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C88D3C39250429E400A67E0B /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C85A37E725059347004832AE /* FileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandler.swift; sourceTree = "<group>"; };
 		C88D3C32250429E300A67E0B /* Snapbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snapbar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88D3C35250429E300A67E0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C88D3C37250429E300A67E0B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +52,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C85A37E625058C89004832AE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C85A37E725059347004832AE /* FileHandler.swift */,
+				C88D3C4A25043D1800A67E0B /* ScreenshotMonitor.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		C88D3C29250429E300A67E0B = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +80,7 @@
 		C88D3C34250429E300A67E0B /* Snapbar */ = {
 			isa = PBXGroup;
 			children = (
+				C85A37E625058C89004832AE /* Helpers */,
 				C88D3C4C250570F300A67E0B /* Models */,
 				C88D3C4E250570FA00A67E0B /* ViewModels */,
 				C88D3C4D250570F700A67E0B /* Views */,
@@ -78,7 +90,6 @@
 				C88D3C41250429E400A67E0B /* Info.plist */,
 				C88D3C42250429E400A67E0B /* Snapbar.entitlements */,
 				C88D3C3B250429E400A67E0B /* Preview Content */,
-				C88D3C4A25043D1800A67E0B /* ScreenshotMonitor.swift */,
 			);
 			path = Snapbar;
 			sourceTree = "<group>";
@@ -198,6 +209,7 @@
 				C88D3C36250429E300A67E0B /* AppDelegate.swift in Sources */,
 				C88D3C562505713400A67E0B /* ScreenshotView.swift in Sources */,
 				C88D3C542505712900A67E0B /* ScreenshotListView.swift in Sources */,
+				C85A37E825059347004832AE /* FileHandler.swift in Sources */,
 				C88D3C522505711800A67E0B /* ScreenshotViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
