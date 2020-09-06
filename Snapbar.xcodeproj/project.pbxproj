@@ -69,9 +69,9 @@
 		C88D3C34250429E300A67E0B /* Snapbar */ = {
 			isa = PBXGroup;
 			children = (
+				C88D3C4C250570F300A67E0B /* Models */,
 				C88D3C4E250570FA00A67E0B /* ViewModels */,
 				C88D3C4D250570F700A67E0B /* Views */,
-				C88D3C4C250570F300A67E0B /* Models */,
 				C88D3C35250429E300A67E0B /* AppDelegate.swift */,
 				C88D3C39250429E400A67E0B /* Assets.xcassets */,
 				C88D3C3E250429E400A67E0B /* Main.storyboard */,

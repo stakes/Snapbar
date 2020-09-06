@@ -33,4 +33,8 @@ class ScreenshotListViewModel: ObservableObject {
         let s = Screenshot(url: url)
         self.screenshots.append(s)
     }
+    
+    func clearScreenshots() {
+        self.screenshots = []
+    }
 }

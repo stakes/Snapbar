@@ -14,10 +14,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     var window: NSWindow!
     var screenshotMonitor: ScreenshotMonitor?
+    var screenshotListViewModel: ScreenshotListViewModel?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        
+        screenshotListViewModel = ScreenshotListViewModel()
+        
         // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
+        let contentView = ContentView(viewModel: screenshotListViewModel!)
 
         // Create the window and set the content view. 
         window = NSWindow(
@@ -39,9 +43,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func screenshotEventHandler(url: URL) {
+        print("screenshotEventHandler()")
         print(url)
-        let vm = ScreenshotListViewModel()
-        vm.addScreenshot(url)
+        
+        screenshotListViewModel!.addScreenshot(url)
     }
 
 }

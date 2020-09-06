@@ -12,8 +12,11 @@ struct ScreenshotListView: View {
     @ObservedObject var viewModel: ScreenshotListViewModel
     var body: some View {
         VStack {
-            ForEach(viewModel.screenshots) { screenshot in
-                ScreenshotView(viewModel: ScreenshotViewModel(screenshot: screenshot))
+            List {
+                ForEach(viewModel.screenshots) { screenshot in
+                    ScreenshotView(viewModel: ScreenshotViewModel(screenshot: screenshot))
+                    Text(self.viewModel.screenshots.description)
+                }
             }
         }
     }

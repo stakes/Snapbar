@@ -9,16 +9,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel: ScreenshotListViewModel
     var body: some View {
-        Group {
-            ScreenshotListView(viewModel: ScreenshotListViewModel())
-        }
+        VStack {
+            HStack {
+                Button(action: {
+                    self.viewModel.clearScreenshots()
+                }) {
+                    Text("Clear")
+                }
+            }
+            ScreenshotListView(viewModel: viewModel)
+        }.frame(width: 500, height: 800)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
 
