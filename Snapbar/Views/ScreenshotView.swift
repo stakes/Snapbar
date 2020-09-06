@@ -13,6 +13,13 @@ struct ScreenshotView: View {
     var body: some View {
         HStack {
             Image(nsImage: NSImage(contentsOf: viewModel.screenshot.url)!).resizable().frame(width: 160, height: 90)
+        }.onDrag {
+            let data = NSImage(contentsOf: self.viewModel.screenshot.url)!
+            let provider = NSItemProvider(contentsOf: self.viewModel.screenshot.url)
+            provider?.previewImageHandler = { (handler, _, _) -> Void in
+                handler?(data as NSSecureCoding?, nil)
+            }
+            return provider!
         }
     }
 }
