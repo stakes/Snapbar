@@ -12,6 +12,13 @@
 		C88D3C3A250429E400A67E0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C88D3C39250429E400A67E0B /* Assets.xcassets */; };
 		C88D3C3D250429E400A67E0B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C88D3C3C250429E400A67E0B /* Preview Assets.xcassets */; };
 		C88D3C40250429E400A67E0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C88D3C3E250429E400A67E0B /* Main.storyboard */; };
+		C88D3C4B25043D1800A67E0B /* ScreenshotMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88D3C4A25043D1800A67E0B /* ScreenshotMonitor.swift */; };
+		C88D3C502505710800A67E0B /* ScreenshotListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88D3C4F2505710800A67E0B /* ScreenshotListViewModel.swift */; };
+		C88D3C522505711800A67E0B /* ScreenshotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88D3C512505711800A67E0B /* ScreenshotViewModel.swift */; };
+		C88D3C542505712900A67E0B /* ScreenshotListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88D3C532505712900A67E0B /* ScreenshotListView.swift */; };
+		C88D3C562505713400A67E0B /* ScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88D3C552505713400A67E0B /* ScreenshotView.swift */; };
+		C88D3C582505714000A67E0B /* Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88D3C572505714000A67E0B /* Screenshot.swift */; };
+		C88D3C5A2505714700A67E0B /* ScreenshotList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88D3C592505714700A67E0B /* ScreenshotList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +30,13 @@
 		C88D3C3F250429E400A67E0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C88D3C41250429E400A67E0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C88D3C42250429E400A67E0B /* Snapbar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Snapbar.entitlements; sourceTree = "<group>"; };
+		C88D3C4A25043D1800A67E0B /* ScreenshotMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotMonitor.swift; sourceTree = "<group>"; };
+		C88D3C4F2505710800A67E0B /* ScreenshotListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotListViewModel.swift; sourceTree = "<group>"; };
+		C88D3C512505711800A67E0B /* ScreenshotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotViewModel.swift; sourceTree = "<group>"; };
+		C88D3C532505712900A67E0B /* ScreenshotListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotListView.swift; sourceTree = "<group>"; };
+		C88D3C552505713400A67E0B /* ScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotView.swift; sourceTree = "<group>"; };
+		C88D3C572505714000A67E0B /* Screenshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screenshot.swift; sourceTree = "<group>"; };
+		C88D3C592505714700A67E0B /* ScreenshotList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +69,16 @@
 		C88D3C34250429E300A67E0B /* Snapbar */ = {
 			isa = PBXGroup;
 			children = (
+				C88D3C4E250570FA00A67E0B /* ViewModels */,
+				C88D3C4D250570F700A67E0B /* Views */,
+				C88D3C4C250570F300A67E0B /* Models */,
 				C88D3C35250429E300A67E0B /* AppDelegate.swift */,
-				C88D3C37250429E300A67E0B /* ContentView.swift */,
 				C88D3C39250429E400A67E0B /* Assets.xcassets */,
 				C88D3C3E250429E400A67E0B /* Main.storyboard */,
 				C88D3C41250429E400A67E0B /* Info.plist */,
 				C88D3C42250429E400A67E0B /* Snapbar.entitlements */,
 				C88D3C3B250429E400A67E0B /* Preview Content */,
+				C88D3C4A25043D1800A67E0B /* ScreenshotMonitor.swift */,
 			);
 			path = Snapbar;
 			sourceTree = "<group>";
@@ -72,6 +89,34 @@
 				C88D3C3C250429E400A67E0B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C88D3C4C250570F300A67E0B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C88D3C572505714000A67E0B /* Screenshot.swift */,
+				C88D3C592505714700A67E0B /* ScreenshotList.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C88D3C4D250570F700A67E0B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C88D3C37250429E300A67E0B /* ContentView.swift */,
+				C88D3C532505712900A67E0B /* ScreenshotListView.swift */,
+				C88D3C552505713400A67E0B /* ScreenshotView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C88D3C4E250570FA00A67E0B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C88D3C4F2505710800A67E0B /* ScreenshotListViewModel.swift */,
+				C88D3C512505711800A67E0B /* ScreenshotViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,8 +190,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C88D3C4B25043D1800A67E0B /* ScreenshotMonitor.swift in Sources */,
+				C88D3C5A2505714700A67E0B /* ScreenshotList.swift in Sources */,
+				C88D3C582505714000A67E0B /* Screenshot.swift in Sources */,
 				C88D3C38250429E300A67E0B /* ContentView.swift in Sources */,
+				C88D3C502505710800A67E0B /* ScreenshotListViewModel.swift in Sources */,
 				C88D3C36250429E300A67E0B /* AppDelegate.swift in Sources */,
+				C88D3C562505713400A67E0B /* ScreenshotView.swift in Sources */,
+				C88D3C542505712900A67E0B /* ScreenshotListView.swift in Sources */,
+				C88D3C522505711800A67E0B /* ScreenshotViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

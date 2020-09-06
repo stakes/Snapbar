@@ -13,7 +13,7 @@ import SwiftUI
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     var window: NSWindow!
-
+    var screenshotMonitor: ScreenshotMonitor?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Create the SwiftUI view that provides the window contents.
@@ -28,12 +28,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.setFrameAutosaveName("Main Window")
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
+        
+        // Monitor for new screenshots
+        screenshotMonitor = ScreenshotMonitor(eventHandler: screenshotEventHandler)
+        screenshotMonitor?.startMonitoring()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
+    
+    func screenshotEventHandler(url: URL) {
+        print(url)
+        let vm = ScreenshotListViewModel()
+        vm.addScreenshot(url)
+    }
 
 }
 
