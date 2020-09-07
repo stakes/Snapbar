@@ -15,6 +15,8 @@ class ScreenshotListViewModel: ObservableObject {
         }
     }
     
+    let listMax:Int = 5 // maybe make this configurable someday
+    
     init() {
         var arr:[Screenshot]
         if let data = UserDefaults.standard.data(forKey: "screenshots") {
@@ -33,6 +35,15 @@ class ScreenshotListViewModel: ObservableObject {
         let movedUrl = FileHandler.shared.moveToSnapbarDirectory(url)
         let s = Screenshot(url: movedUrl)
         self.screenshots.append(s)
+        if (self.screenshots.count == self.listMax+1) {
+            self.clearScreenshotAt(0)
+        }
+    }
+    
+    func clearScreenshotAt(_ index: Int) {
+        let screenshot = self.screenshots[index]
+        FileHandler.shared.removeFileAtUrl(screenshot.url)
+        self.screenshots.remove(at: index)
     }
     
     func clearScreenshots() {

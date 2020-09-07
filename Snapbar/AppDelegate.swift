@@ -43,9 +43,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func screenshotEventHandler(url: URL) {
-        print("screenshotEventHandler()")
-        print(url)
-        
         screenshotListViewModel!.addScreenshot(url)
     }
 

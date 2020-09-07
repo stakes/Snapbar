@@ -11,6 +11,7 @@ import Foundation
 class FileHandler: ObservableObject {
     
     static let shared = FileHandler()
+    let fileManager = FileManager.default
     var destination:URL?
     
     init() {
@@ -22,9 +23,9 @@ class FileHandler: ObservableObject {
         let documentsDirectory = paths[0]
         let docURL = URL(string: documentsDirectory)!
         destination = docURL.appendingPathComponent("Snapbar")
-        if !FileManager.default.fileExists(atPath: destination!.path) {
+        if !fileManager.fileExists(atPath: destination!.path) {
             do {
-                try FileManager.default.createDirectory(atPath: destination!.path, withIntermediateDirectories: true, attributes: nil)
+                try fileManager.createDirectory(atPath: destination!.path, withIntermediateDirectories: true, attributes: nil)
             } catch {
                 print(error.localizedDescription);
             }
@@ -32,7 +33,6 @@ class FileHandler: ObservableObject {
     }
     
     func moveToSnapbarDirectory(_ url:URL) -> URL {
-        let fileManager = FileManager.default
         let destUrl = URL(fileURLWithPath: (destination?.appendingPathComponent(url.lastPathComponent).path)!)
         if fileManager.fileExists(atPath: url.path) {
             do {
@@ -45,17 +45,23 @@ class FileHandler: ObservableObject {
         return destUrl
     }
     
-    func removeFile() {
-        
+    func removeFileAtUrl(_ url:URL) {
+        print("removeFileAtUrl")
+        print(url)
+        do {
+            try fileManager.removeItem(atPath: url.path)
+        } catch {
+            // probably handle idk
+            print(error)
+        }
     }
     
     func removeAllFiles() {
-        let fileManager = FileManager.default
         do {
             let urls = try fileManager.contentsOfDirectory(atPath: destination!.path)
             for url in urls {
                 let fileUrl = URL(fileURLWithPath: (destination?.appendingPathComponent(url).path)!)
-                try FileManager.default.removeItem(atPath: fileUrl.path)
+                try fileManager.removeItem(atPath: fileUrl.path)
             }
         } catch  {
             // probably handle idk
