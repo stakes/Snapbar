@@ -33,6 +33,17 @@ class FileHandler: ObservableObject {
     
     func moveToSnapbarDirectory(_ url:URL) {
         print("moveToSnapbarDirectory")
-        print(url.absoluteString)
+        let fileManager = FileManager.default
+        if fileManager.fileExists(atPath: url.path) {
+            do {
+                let destUrl = URL(fileURLWithPath: (destination?.appendingPathComponent(url.lastPathComponent).absoluteString)!)
+                try fileManager.moveItem(at: url, to: destUrl)
+                print("moved")
+            } catch let error {
+                // probably handle idk
+                print(error)
+            }
+        }
+        
     }
 }
