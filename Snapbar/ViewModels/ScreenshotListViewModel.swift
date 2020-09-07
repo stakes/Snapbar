@@ -30,12 +30,13 @@ class ScreenshotListViewModel: ObservableObject {
     }
     
     func addScreenshot(_ url:URL) {
-        let s = Screenshot(url: url)
+        let movedUrl = FileHandler.shared.moveToSnapbarDirectory(url)
+        let s = Screenshot(url: movedUrl)
         self.screenshots.append(s)
-        FileHandler.shared.moveToSnapbarDirectory(url)
     }
     
     func clearScreenshots() {
+        FileHandler.shared.removeAllFiles()
         self.screenshots = []
     }
 }

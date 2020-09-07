@@ -22,28 +22,45 @@ class FileHandler: ObservableObject {
         let documentsDirectory = paths[0]
         let docURL = URL(string: documentsDirectory)!
         destination = docURL.appendingPathComponent("Snapbar")
-        if !FileManager.default.fileExists(atPath: destination!.absoluteString) {
+        if !FileManager.default.fileExists(atPath: destination!.path) {
             do {
-                try FileManager.default.createDirectory(atPath: destination!.absoluteString, withIntermediateDirectories: true, attributes: nil)
+                try FileManager.default.createDirectory(atPath: destination!.path, withIntermediateDirectories: true, attributes: nil)
             } catch {
                 print(error.localizedDescription);
             }
         }
     }
     
-    func moveToSnapbarDirectory(_ url:URL) {
-        print("moveToSnapbarDirectory")
+    func moveToSnapbarDirectory(_ url:URL) -> URL {
         let fileManager = FileManager.default
+        let destUrl = URL(fileURLWithPath: (destination?.appendingPathComponent(url.lastPathComponent).path)!)
         if fileManager.fileExists(atPath: url.path) {
             do {
-                let destUrl = URL(fileURLWithPath: (destination?.appendingPathComponent(url.lastPathComponent).absoluteString)!)
                 try fileManager.moveItem(at: url, to: destUrl)
-                print("moved")
             } catch let error {
                 // probably handle idk
                 print(error)
             }
         }
+        return destUrl
+    }
+    
+    func removeFile() {
         
     }
+    
+    func removeAllFiles() {
+        let fileManager = FileManager.default
+        do {
+            let urls = try fileManager.contentsOfDirectory(atPath: destination!.path)
+            for url in urls {
+                let fileUrl = URL(fileURLWithPath: (destination?.appendingPathComponent(url).path)!)
+                try FileManager.default.removeItem(atPath: fileUrl.path)
+            }
+        } catch  {
+            // probably handle idk
+            print(error)
+        }
+    }
+    
 }
