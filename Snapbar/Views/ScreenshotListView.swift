@@ -13,9 +13,8 @@ struct ScreenshotListView: View {
     var body: some View {
         VStack {
             List {
-                ForEach(viewModel.screenshots) { screenshot in
+                ForEach(viewModel.screenshots.reversed()) { screenshot in
                     ScreenshotView(viewModel: ScreenshotViewModel(screenshot: screenshot))
-                    Text(self.viewModel.screenshots.description)
                 }
             }
         }

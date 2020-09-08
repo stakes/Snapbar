@@ -11,4 +11,5 @@ import Foundation
 struct Screenshot: Codable, Identifiable  {
     let id: UUID = UUID()
     let url: URL
+    let createdAt: Date
 }

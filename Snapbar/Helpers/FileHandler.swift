@@ -46,8 +46,6 @@ class FileHandler: ObservableObject {
     }
     
     func removeFileAtUrl(_ url:URL) {
-        print("removeFileAtUrl")
-        print(url)
         do {
             try fileManager.removeItem(atPath: url.path)
         } catch {

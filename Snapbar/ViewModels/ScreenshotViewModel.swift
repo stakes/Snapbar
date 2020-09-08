@@ -10,6 +10,7 @@ import Foundation
 
 class ScreenshotViewModel: ObservableObject, Identifiable {
     @Published var screenshot: Screenshot
+
     init(screenshot: Screenshot) {
         self.screenshot = screenshot
     }
