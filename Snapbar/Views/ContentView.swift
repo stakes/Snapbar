@@ -20,7 +20,7 @@ struct ContentView: View {
                 }
             }
             ScreenshotListView(viewModel: viewModel)
-        }.frame(width: 500, height: 800)
+        }
     }
 }
 

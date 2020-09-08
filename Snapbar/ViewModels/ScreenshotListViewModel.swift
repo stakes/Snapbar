@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AppKit
 
 class ScreenshotListViewModel: ObservableObject {
     @Published var screenshots: [Screenshot] {
@@ -33,11 +34,19 @@ class ScreenshotListViewModel: ObservableObject {
     
     func addScreenshot(_ url:URL) {
         let movedUrl = FileHandler.shared.moveToSnapbarDirectory(url)
+        copyImageAtUrlToClipboard(movedUrl)
         let s = Screenshot(url: movedUrl, createdAt: Date())
         self.screenshots.append(s)
         if (self.screenshots.count == self.listMax+1) {
             self.clearScreenshotAt(0)
         }
+    }
+    
+    func copyImageAtUrlToClipboard(_ url:URL) {
+        let image = NSImage(contentsOf: url)!
+        let pasteboard = NSPasteboard.general
+        pasteboard.clearContents()
+        pasteboard.writeObjects([image])
     }
     
     func clearScreenshotAt(_ index: Int) {
