@@ -11,15 +11,9 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var viewModel: ScreenshotListViewModel
     var body: some View {
-        VStack {
-            HStack {
-                Button(action: {
-                    self.viewModel.clearScreenshots()
-                }) {
-                    Text("Clear")
-                }
-            }
-            ScreenshotListView(viewModel: viewModel)
+        VStack(alignment: .leading) {
+            HeaderView(viewModel: viewModel)
+            ScreenshotListView(viewModel: viewModel).padding(.top, -8)
         }
     }
 }

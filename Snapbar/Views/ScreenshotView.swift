@@ -22,12 +22,13 @@ struct ScreenshotView: View {
     var body: some View {
         HStack {
             if (NSImage(contentsOf: viewModel.screenshot.url) != nil) {
-                ZStack(alignment: .bottomLeading) {
+                VStack(alignment: .leading) {
                     HStack {
-                        Image(nsImage: NSImage(contentsOf: viewModel.screenshot.url)!)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 160, height: 90)
+                            Image(nsImage: NSImage(contentsOf: self.viewModel.screenshot.url)!)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(height: 160)
+//                                .clipShape(RoundedRectangle(cornerRadius: 4, style: .continuous))
                     }.onDrag {
                         let data = NSImage(contentsOf: self.viewModel.screenshot.url)!
                         let provider = NSItemProvider(contentsOf: self.viewModel.screenshot.url)
@@ -37,7 +38,7 @@ struct ScreenshotView: View {
                         return provider!
                     }.onHover { over in
                         self.isHover = over
-                    }
+                    }.background(Color.red)
                     Text(self.createdAtTimeAgo)
                         .font(.system(size: 12, weight: .medium, design: .default))
                         .foregroundColor(.gray)
@@ -70,7 +71,7 @@ struct ScreenshotView: View {
                     Spacer()
                 }.frame(width: 160, height: 90)
             }
-        }.frame(width: 200, height: 112).border(Color.gray)
+        }.frame(width: 200, height: 112)
     }
 }
 

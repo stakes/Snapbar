@@ -41,7 +41,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // Make this into a menu bar app
         let popover = NSPopover()
-        popover.contentSize = NSSize(width: 220, height: 400)
+        popover.contentSize = NSSize(width: 220, height: 480)
         popover.behavior = .transient
         popover.contentViewController = NSHostingController(rootView: contentView)
         self.popover = popover
