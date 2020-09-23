@@ -14,8 +14,7 @@ struct ScreenshotListView: View {
         HStack {
             HStack {
                 ForEach(self.viewModel.screenshots.reversed()) { screenshot in
-//                        ScreenshotView(viewModel: ScreenshotViewModel(screenshot: screenshot))
-                    TestView(viewModel: ScreenshotViewModel(screenshot: screenshot))
+                        ScreenshotView(viewModel: ScreenshotViewModel(screenshot: screenshot))
                 }
             }
         }
