@@ -12,7 +12,7 @@ struct ScreenshotListView: View {
     @ObservedObject var viewModel: ScreenshotListViewModel
     var body: some View {
         HStack {
-            List {
+            HStack {
                 ForEach(self.viewModel.screenshots.reversed()) { screenshot in
 //                        ScreenshotView(viewModel: ScreenshotViewModel(screenshot: screenshot))
                     TestView(viewModel: ScreenshotViewModel(screenshot: screenshot))

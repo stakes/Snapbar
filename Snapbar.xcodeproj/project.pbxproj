@@ -11,7 +11,7 @@
 		C86F6AED2507029B0004D47E /* Date+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86F6AEC2507029B0004D47E /* Date+Additions.swift */; };
 		C86F6AF125072B8F0004D47E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86F6AF025072B8F0004D47E /* HeaderView.swift */; };
 		C86F6AF325072BC50004D47E /* DropdownMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86F6AF225072BC50004D47E /* DropdownMenuView.swift */; };
-		C86F6AF5250B2FDA0004D47E /* Image+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86F6AF4250B2FDA0004D47E /* Image+Additions.swift */; };
+		C86F6AF5250B2FDA0004D47E /* NSImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86F6AF4250B2FDA0004D47E /* NSImage+Additions.swift */; };
 		C86F6AF7250D38A10004D47E /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86F6AF6250D38A10004D47E /* TestView.swift */; };
 		C86F6AF9250D3DAF0004D47E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C86F6AF8250D3DAF0004D47E /* Colors.xcassets */; };
 		C88D3C36250429E300A67E0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88D3C35250429E300A67E0B /* AppDelegate.swift */; };
@@ -33,7 +33,7 @@
 		C86F6AEC2507029B0004D47E /* Date+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Additions.swift"; sourceTree = "<group>"; };
 		C86F6AF025072B8F0004D47E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		C86F6AF225072BC50004D47E /* DropdownMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownMenuView.swift; sourceTree = "<group>"; };
-		C86F6AF4250B2FDA0004D47E /* Image+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Additions.swift"; sourceTree = "<group>"; };
+		C86F6AF4250B2FDA0004D47E /* NSImage+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Additions.swift"; sourceTree = "<group>"; };
 		C86F6AF6250D38A10004D47E /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		C86F6AF8250D3DAF0004D47E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		C88D3C32250429E300A67E0B /* Snapbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snapbar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,7 +70,7 @@
 				C85A37E725059347004832AE /* FileHandler.swift */,
 				C88D3C4A25043D1800A67E0B /* ScreenshotMonitor.swift */,
 				C86F6AEC2507029B0004D47E /* Date+Additions.swift */,
-				C86F6AF4250B2FDA0004D47E /* Image+Additions.swift */,
+				C86F6AF4250B2FDA0004D47E /* NSImage+Additions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -222,7 +222,7 @@
 			files = (
 				C88D3C4B25043D1800A67E0B /* ScreenshotMonitor.swift in Sources */,
 				C88D3C5A2505714700A67E0B /* ScreenshotList.swift in Sources */,
-				C86F6AF5250B2FDA0004D47E /* Image+Additions.swift in Sources */,
+				C86F6AF5250B2FDA0004D47E /* NSImage+Additions.swift in Sources */,
 				C88D3C582505714000A67E0B /* Screenshot.swift in Sources */,
 				C88D3C38250429E300A67E0B /* ContentView.swift in Sources */,
 				C88D3C502505710800A67E0B /* ScreenshotListViewModel.swift in Sources */,

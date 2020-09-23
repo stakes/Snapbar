@@ -22,15 +22,7 @@ struct TestView: View {
         
             HStack {
                 ZStack(alignment: .bottomLeading) {
-                    Image(nsImage: NSImage(contentsOf: self.viewModel.screenshot.url)!.resizedTo(width: 178, maxHeight: 178))
-//                        .resizable()
-//                        .frame(width: 198, height: 198)
-//                        .aspectRatio(contentMode: .fit)
-//                        .mask(
-//                        VStack {
-//                            Rectangle().cornerRadius(4).frame(width: 178, height: 178)
-//                        }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center))
-//                        .padding(-10)
+                    Image(nsImage: NSImage(contentsOf: self.viewModel.screenshot.url)!.resizedTo(height: 100))
                         .onDrag {
                             let data = NSImage(contentsOf: self.viewModel.screenshot.url)!
                             let provider = NSItemProvider(contentsOf: self.viewModel.screenshot.url)
@@ -90,40 +82,3 @@ struct TestView: View {
 //    }
 //}
 
-extension NSImage {
-    func resizedTo(width: CGFloat, maxHeight: CGFloat) -> NSImage {
-        let aspectRatio = CGFloat(self.size.width/self.size.height)
-        let ogResizedHeight = CGFloat(ceil(width/size.width * size.height))
-        let targetHeight = (ogResizedHeight > maxHeight) ? maxHeight : ogResizedHeight
-        let canvasSize = CGSize(width: width, height: targetHeight)
-        let img = NSImage(size: canvasSize)
-        img.lockFocus()
-        NSGraphicsContext.current?.imageInterpolation = .high
-        if (aspectRatio < 1) {
-            let blurredCopy = self.blur()
-            blurredCopy.draw(in: NSRect(origin: CGPoint(x: -(width * 0.1), y: -(ogResizedHeight * 0.1)), size: CGSize(width: width*1.2, height: ogResizedHeight*1.2)), from: NSRect(origin: .zero, size: size), operation: .copy, fraction: 1)
-            let ogImageSize = CGSize(width: ceil(maxHeight*aspectRatio), height: maxHeight)
-            let imageOrigin = CGPoint(x: (width-ceil(maxHeight*aspectRatio))/2, y: 0)
-            draw(in: NSRect(origin: imageOrigin, size: ogImageSize), from: NSRect(origin: .zero, size: size), operation: .copy, fraction: 1)
-        } else {
-            draw(in: NSRect(origin: .zero, size: canvasSize), from: NSRect(origin: .zero, size: size), operation: .copy, fraction: 1)
-        }
-        img.unlockFocus()
-        return img
-    }
-    
-    func blur() -> NSImage {
-        let inputImage = CIImage(data: self.tiffRepresentation!)
-        let filter = CIFilter(name: "CIGaussianBlur")
-        filter!.setDefaults()
-        filter!.setValue(inputImage, forKey: kCIInputImageKey)
-        filter!.setValue(5, forKey: kCIInputRadiusKey)
-        let outputImage = filter!.value(forKey: kCIOutputImageKey) as! CIImage
-        let outputImageRect = NSRectFromCGRect(outputImage.extent)
-        let blurredImage = NSImage(size: outputImageRect.size)
-        blurredImage.lockFocus()
-        outputImage.draw(at: NSZeroPoint, from: outputImageRect, operation: .copy, fraction: 1.0)
-        blurredImage.unlockFocus()
-        return blurredImage
-    }
-}
