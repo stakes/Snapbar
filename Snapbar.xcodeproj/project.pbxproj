@@ -25,6 +25,7 @@
 		C88D3C562505713400A67E0B /* ScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88D3C552505713400A67E0B /* ScreenshotView.swift */; };
 		C88D3C582505714000A67E0B /* Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88D3C572505714000A67E0B /* Screenshot.swift */; };
 		C88D3C5A2505714700A67E0B /* ScreenshotList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88D3C592505714700A67E0B /* ScreenshotList.swift */; };
+		C890EE83251B04C8005AF5FB /* View+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C890EE82251B04C8005AF5FB /* View+Additions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		C88D3C552505713400A67E0B /* ScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotView.swift; sourceTree = "<group>"; };
 		C88D3C572505714000A67E0B /* Screenshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screenshot.swift; sourceTree = "<group>"; };
 		C88D3C592505714700A67E0B /* ScreenshotList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotList.swift; sourceTree = "<group>"; };
+		C890EE82251B04C8005AF5FB /* View+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				C88D3C4A25043D1800A67E0B /* ScreenshotMonitor.swift */,
 				C86F6AEC2507029B0004D47E /* Date+Additions.swift */,
 				C86F6AF4250B2FDA0004D47E /* NSImage+Additions.swift */,
+				C890EE82251B04C8005AF5FB /* View+Additions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				C86F6AF125072B8F0004D47E /* HeaderView.swift in Sources */,
 				C88D3C542505712900A67E0B /* ScreenshotListView.swift in Sources */,
 				C86F6AF325072BC50004D47E /* DropdownMenuView.swift in Sources */,
+				C890EE83251B04C8005AF5FB /* View+Additions.swift in Sources */,
 				C85A37E825059347004832AE /* FileHandler.swift in Sources */,
 				C88D3C522505711800A67E0B /* ScreenshotViewModel.swift in Sources */,
 				C86F6AED2507029B0004D47E /* Date+Additions.swift in Sources */,

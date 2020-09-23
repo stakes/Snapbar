@@ -9,6 +9,8 @@
 import Cocoa
 import SwiftUI
 
+var po: NSPopover!
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
@@ -41,10 +43,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // Make this into a menu bar app
         let popover = NSPopover()
+        let vc = NSHostingController(rootView: contentView)
         popover.contentSize = NSSize(width: 220, height: 480)
         popover.behavior = .transient
-        popover.contentViewController = NSHostingController(rootView: contentView)
+       
+        popover.contentViewController = vc
         self.popover = popover
+        po = self.popover
         
         self.statusBarItem = NSStatusBar.system.statusItem(withLength: CGFloat(NSStatusItem.variableLength))
         if let button = self.statusBarItem.button {

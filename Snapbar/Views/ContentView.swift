@@ -13,7 +13,15 @@ struct ContentView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HeaderView(viewModel: viewModel)
-            ScreenshotListView(viewModel: viewModel).padding(.top, -8)
+            ScreenshotListView(viewModel: viewModel)
+                .padding(.top, -8)
+                .background(
+                    GeometryReader { geo in
+                        Color.clear.onAppear {
+                            po.contentSize = geo.size
+                        }
+                    }
+                )
         }
     }
 }
