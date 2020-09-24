@@ -1,7 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "gear-icon.pdf",
+      "filename" : "gear-icon-light.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "gear-icon-dark.pdf",
       "idiom" : "universal"
     }
   ],

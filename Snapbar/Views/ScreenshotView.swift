@@ -46,7 +46,7 @@ struct ScreenshotView: View {
                 }
                 .background(
                     Rectangle()
-                        .fill(isHover ? Color(.white) : Color("cardDefault"))
+                        .fill(isHover ? Color.white : Color.clear)
                         .cornerRadius(8)
                         .shadow(color: isHover ? Color.gray : Color.clear, radius: 2, x: 0, y: 0))
                         .padding(4)

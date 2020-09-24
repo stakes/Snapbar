@@ -26,6 +26,7 @@ struct DropdownMenuView: NSViewRepresentable {
         
         let iconItem = NSMenuItem()
         let iconImage = NSImage(named: "gear-icon")
+        iconImage?.size = NSSize(width: 12, height: 12)
         iconItem.image = iconImage
         
         let clearItem = NSMenuItem(title: "Clear", action: #selector(Coordinator.clearAction), keyEquivalent: "")
