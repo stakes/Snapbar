@@ -52,18 +52,6 @@ struct ScreenshotView: View {
                 }
                 .animation(.default).focusable()
                 
-            } else {
-                // missing image
-                HStack {
-                    Spacer()
-                    VStack {
-                        Text("🤷‍♀️").padding(.bottom, 6).font(.system(size: 21))
-                        Text("Missing image")
-                            .font(.system(size: 12, weight: .medium, design: .default))
-                            .foregroundColor(.gray)
-                    }
-                    Spacer()
-                }.frame(width: 160, height: 90)
             }
         }
     }
