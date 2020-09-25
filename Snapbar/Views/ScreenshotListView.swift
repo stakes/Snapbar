@@ -16,7 +16,7 @@ struct ScreenshotListView: View {
                 ForEach(self.viewModel.screenshots.reversed()) { screenshot in
                     ScreenshotView(viewModel: ScreenshotViewModel(screenshot: screenshot))
                 }
-            }
+            }.padding(.horizontal, 8)
         }
     }
 }

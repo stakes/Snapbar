@@ -11,7 +11,7 @@ import Foundation
 extension Date {
     func relativeTime(in locale: Locale = .current) -> String {
         let formatter = RelativeDateTimeFormatter()
-        formatter.unitsStyle = .full
+        formatter.unitsStyle = .abbreviated
         return formatter.localizedString(for: self, relativeTo: Date())
     }
 }

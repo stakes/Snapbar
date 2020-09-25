@@ -13,44 +13,41 @@ import SwiftUI
 struct ScreenshotView: View {
     @ObservedObject var viewModel: ScreenshotViewModel
     @State var isHover: Bool = false
+    @State var isSelected: Bool = false
     var body: some View {
         
         HStack {
             if (NSImage(contentsOf: self.viewModel.screenshot.url) != nil) {
-                HStack {
-                    ZStack(alignment: .bottomLeading) {
-                        Image(nsImage: NSImage(contentsOf: self.viewModel.screenshot.url)!.resizedTo(height: 100))
-                            .onDrag {
-                                let data = NSImage(contentsOf: self.viewModel.screenshot.url)!
-                                let provider = NSItemProvider(contentsOf: self.viewModel.screenshot.url)
-                                provider?.previewImageHandler = { (handler, _, _) -> Void in
-                                    handler?(data as NSSecureCoding?, nil)
-                                }
-                                return provider!
-                            }
-    //                        .layoutPriority(-1)
-                        if isHover {
-                            Rectangle()
-                                .foregroundColor(.clear)
-                                .background(
-                                    LinearGradient(gradient: Gradient(colors: [Color(red: 0, green: 0, blue: 0, opacity: 0), .black]), startPoint: .top, endPoint: .bottom)).opacity(0.2).cornerRadius(4).padding(0)
-                                .allowsHitTesting(false)
-                            Text(self.viewModel.screenshot.createdAt.relativeTime())
-                                .font(.system(size: 12, weight: .regular, design: .default))
-                                .foregroundColor(.white)
-                                .opacity(self.isHover ? 1 : 0)
-                                .padding(8)
-                                .allowsHitTesting(false)
-                        }
-                    }.padding(8)
-                }
-                .background(
-                    Rectangle()
-                        .fill(isHover ? Color.white : Color.clear)
-                        .cornerRadius(8)
-                        .shadow(color: isHover ? Color.gray : Color.clear, radius: 2, x: 0, y: 0))
+  
+                ZStack(alignment: .bottomLeading) {
+                    Image(nsImage: NSImage(contentsOf: self.viewModel.screenshot.url)!.resizedTo(height: 100))
+                        .overlay(
+                            LinearGradient(gradient: Gradient(colors: [Color(red: 0, green: 0, blue: 0, opacity: 0), Color(red: 0, green: 0, blue: 0, opacity: isHover ? 0.4 : 0)]), startPoint: .top, endPoint: .bottom))
+                        .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
                         .padding(4)
-                .onHover { hover in
+                        .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(Color.white.opacity(isHover ? 0.2 : 0), lineWidth: 2))
+                        .padding(4)
+                        .background(Color.blue.opacity(isHover ? 0.2 : 0))
+                        .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+                        .padding(.vertical, 8)
+                        .onDrag {
+                            let data = NSImage(contentsOf: self.viewModel.screenshot.url)!
+                            let provider = NSItemProvider(contentsOf: self.viewModel.screenshot.url)
+                            provider?.previewImageHandler = { (handler, _, _) -> Void in
+                                handler?(data as NSSecureCoding?, nil)
+                            }
+                            return provider!
+                        }
+                    if isHover {
+                        Text(self.viewModel.screenshot.createdAt.relativeTime())
+                            .font(.system(size: 12, weight: .regular, design: .default))
+                            .foregroundColor(.white)
+                            .opacity(self.isHover ? 1 : 0)
+                            .padding(.vertical, 24)
+                            .padding(.horizontal, 16)
+                            .allowsHitTesting(false)
+                    }
+                }.onHover { hover in
                     self.isHover = hover
                 }
                 .animation(.default).focusable()
