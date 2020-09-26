@@ -14,6 +14,11 @@ class ScreenshotListViewModel: ObservableObject {
         didSet {
             try? UserDefaults.standard.set(JSONEncoder().encode(screenshots), forKey: "screenshots")
         }
+        // whenever this changes
+        willSet {
+            // resize
+            
+        }
     }
     
     let listMax:Int = 5 // maybe make this configurable someday
@@ -30,9 +35,15 @@ class ScreenshotListViewModel: ObservableObject {
             arr = [Screenshot]()
         }
         self.screenshots = arr
+        self.cleanBrokenScreenshots()
+    }
+    
+    func cleanBrokenScreenshots() {
+        self.screenshots.removeAll { NSImage(contentsOf: $0.url) == nil }
     }
     
     func addScreenshot(_ url:URL) {
+        self.cleanBrokenScreenshots()
         let movedUrl = FileHandler.shared.moveToSnapbarDirectory(url)
         copyImageAtUrlToClipboard(movedUrl)
         let s = Screenshot(url: movedUrl, createdAt: Date())
@@ -54,7 +65,7 @@ class ScreenshotListViewModel: ObservableObject {
         FileHandler.shared.removeFileAtUrl(screenshot.url)
         self.screenshots.remove(at: index)
     }
-    
+
     func clearScreenshots() {
         FileHandler.shared.removeAllFiles()
         self.screenshots = []

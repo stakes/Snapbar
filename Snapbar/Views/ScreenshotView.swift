@@ -14,6 +14,7 @@ struct ScreenshotView: View {
     @ObservedObject var viewModel: ScreenshotViewModel
     @State var isHover: Bool = false
     @State var isSelected: Bool = false
+        
     var body: some View {
         
         HStack {
@@ -22,12 +23,14 @@ struct ScreenshotView: View {
                 ZStack(alignment: .bottomLeading) {
                     Image(nsImage: NSImage(contentsOf: self.viewModel.screenshot.url)!.resizedTo(height: 100))
                         .overlay(
-                            LinearGradient(gradient: Gradient(colors: [Color(red: 0, green: 0, blue: 0, opacity: 0), Color(red: 0, green: 0, blue: 0, opacity: isHover ? 0.4 : 0)]), startPoint: .top, endPoint: .bottom))
+                            LinearGradient(gradient: Gradient(colors: [Color(red: 0, green: 0, blue: 0, opacity: 0), Color(red: 0, green: 0, blue: 0, opacity: 0.4)]), startPoint: .top, endPoint: .bottom)
+                                .opacity(self.isHover ? 1 : 0)
+                        )
                         .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
                         .padding(4)
-                        .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(Color.white.opacity(isHover ? 0.2 : 0), lineWidth: 2))
+                        .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(Color.white.opacity(isHover ? 0.1 : 0), lineWidth: 2))
                         .padding(4)
-                        .background(Color.blue.opacity(isHover ? 0.2 : 0))
+                        .background(Color.blue.opacity(isHover ? 0.1 : 0))
                         .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
                         .padding(.vertical, 8)
                         .onDrag {
@@ -38,20 +41,20 @@ struct ScreenshotView: View {
                             }
                             return provider!
                         }
-                    if isHover {
-                        Text(self.viewModel.screenshot.createdAt.relativeTime())
-                            .font(.system(size: 12, weight: .regular, design: .default))
-                            .foregroundColor(.white)
-                            .opacity(self.isHover ? 1 : 0)
-                            .padding(.vertical, 24)
-                            .padding(.horizontal, 16)
-                            .allowsHitTesting(false)
-                    }
+                        .animation(.linear(duration: 0.25))
+                    Text(self.viewModel.screenshot.createdAt.relativeTime())
+                        .font(.system(size: 12, weight: .regular, design: .default))
+                        .foregroundColor(.white)
+                        .opacity(self.isHover ? 1 : 0)
+                        .padding(.vertical, self.isHover ? 24 : 16)
+                        .padding(.horizontal, 16)
+                        .allowsHitTesting(false)
+                        .animation(Animation.easeOut.delay(0.1))
                 }.onHover { hover in
                     self.isHover = hover
-                }
-                .animation(.default).focusable()
+                }.focusable()
                 
+            
             }
         }
     }

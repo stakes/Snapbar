@@ -19,6 +19,9 @@ struct ContentView: View {
                     GeometryReader { geo in
                         Color.clear.onAppear {
                             po.contentSize = geo.size
+                        }.onReceive(self.viewModel.$screenshots) { screenshots in
+                            print(geo.size)
+                            po.contentSize = geo.size
                         }
                     }
                 )
