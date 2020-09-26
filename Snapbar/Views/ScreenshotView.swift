@@ -28,9 +28,9 @@ struct ScreenshotView: View {
                         )
                         .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
                         .padding(4)
-                        .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(Color.white.opacity(isHover ? 0.1 : 0), lineWidth: 2))
+                        .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(Color("HighlightBorderColor").opacity(isHover ? 1 : 0), lineWidth: 2))
                         .padding(4)
-                        .background(Color.blue.opacity(isHover ? 0.1 : 0))
+                        .background(Color("HighlightColor").opacity(isHover ? 1 : 0))
                         .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
                         .padding(.vertical, 8)
                         .onDrag {
