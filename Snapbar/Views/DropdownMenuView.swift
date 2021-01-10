@@ -65,10 +65,3 @@ struct DropdownMenuView: NSViewRepresentable {
         }
     }
 }
-
-//struct DropdownMenuView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DropdownMenuView()
-//    }
-//}
-

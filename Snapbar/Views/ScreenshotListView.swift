@@ -11,12 +11,13 @@ import SwiftUI
 struct ScreenshotListView: View {
     @ObservedObject var viewModel: ScreenshotListViewModel
     var body: some View {
-        HStack {
-            HStack {
+        VStack {
+            VStack {
                 ForEach(self.viewModel.screenshots.reversed()) { screenshot in
                     ScreenshotView(viewModel: ScreenshotViewModel(screenshot: screenshot))
+                        .frame(width: 200)
                 }
-            }.padding(.horizontal, 8)
+            }
         }
     }
 }

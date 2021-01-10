@@ -17,7 +17,6 @@ class ScreenshotListViewModel: ObservableObject {
         // whenever this changes
         willSet {
             // resize
-            
         }
     }
     

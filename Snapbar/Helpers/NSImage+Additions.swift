@@ -9,6 +9,8 @@
 import AppKit
 
 extension NSImage {
+    
+    // not used
     func resizedTo(height: CGFloat) -> NSImage {
         let aspectRatio = CGFloat(self.size.width/self.size.height)
         let canvasSize = CGSize(width: height*aspectRatio, height: height)
@@ -20,6 +22,7 @@ extension NSImage {
         return img
     }
     
+    // not used
     func resizedTo(width: CGFloat) -> NSImage {
         let aspectRatio = CGFloat(self.size.height/self.size.width)
         let canvasSize = CGSize(width: width, height: width*aspectRatio)
@@ -65,5 +68,43 @@ extension NSImage {
         outputImage.draw(at: NSZeroPoint, from: outputImageRect, operation: .copy, fraction: 1.0)
         blurredImage.unlockFocus()
         return blurredImage
+    }
+    
+    // from @raphaelhanneken
+    // https://gist.github.com/raphaelhanneken/cb924aa280f4b9dbb480
+    
+    /// Resize the image to the given size.
+    ///
+    /// - Parameter size: The size to resize the image to.
+    /// - Returns: The resized image.
+    func resize(withSize targetSize: NSSize) -> NSImage? {
+        let frame = NSRect(x: 0, y: 0, width: targetSize.width, height: targetSize.height)
+        guard let representation = self.bestRepresentation(for: frame, context: nil, hints: nil) else {
+            return nil
+        }
+        let image = NSImage(size: targetSize, flipped: false, drawingHandler: { (_) -> Bool in
+            return representation.draw(in: frame)
+        })
+
+        return image
+    }
+    
+    /// Copy the image and resize it to the supplied size, while maintaining it's
+    /// original aspect ratio.
+    ///
+    /// - Parameter size: The target size of the image.
+    /// - Returns: The resized image.
+    func resizeMaintainingAspectRatio(withSize targetSize: NSSize) -> NSImage? {
+        let newSize: NSSize
+        let widthRatio  = targetSize.width / self.size.width
+        let heightRatio = targetSize.height / self.size.height
+        if widthRatio < heightRatio {
+            newSize = NSSize(width: floor(self.size.width * widthRatio),
+                             height: floor(self.size.height * widthRatio))
+        } else {
+            newSize = NSSize(width: floor(self.size.width * heightRatio),
+                             height: floor(self.size.height * heightRatio))
+        }
+        return self.resize(withSize: newSize)
     }
 }
