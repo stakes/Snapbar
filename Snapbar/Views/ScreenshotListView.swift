@@ -12,10 +12,18 @@ struct ScreenshotListView: View {
     @ObservedObject var viewModel: ScreenshotListViewModel
     var body: some View {
         VStack {
-            VStack {
-                ForEach(self.viewModel.screenshots.reversed()) { screenshot in
-                    ScreenshotView(viewModel: ScreenshotViewModel(screenshot: screenshot))
-                        .frame(width: 200)
+            if (self.viewModel.screenshots.count == 0) {
+                VStack {
+                    Text("📸").font(.system(size: 36, weight: .regular, design: .default)).padding(.bottom, 2)
+                    Text("Take some screenshots")
+                    Text("And they'll show up here")
+                }.frame(width: 200, height: 180)
+            } else {
+                VStack {
+                    ForEach(self.viewModel.screenshots.reversed()) { screenshot in
+                        ScreenshotView(viewModel: ScreenshotViewModel(screenshot: screenshot))
+                            .frame(width: 200)
+                    }
                 }
             }
         }

@@ -15,16 +15,7 @@ struct ContentView: View {
             HeaderView(viewModel: viewModel)
             ScreenshotListView(viewModel: viewModel)
                 .padding(.top, -8)
-                .background(
-                    GeometryReader { geo in
-                        Color.clear.onAppear {
-                            po.contentSize = geo.size
-                        }.onReceive(self.viewModel.$screenshots) { screenshots in
-                            print(geo.size)
-                            po.contentSize = geo.size
-                        }
-                    }
-                )
+//
         }
     }
 }
