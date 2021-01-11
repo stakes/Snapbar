@@ -14,7 +14,7 @@ struct ScreenshotView: View {
     @ObservedObject var viewModel: ScreenshotViewModel
     @State var isHover: Bool = false
     @State var isSelected: Bool = false
-    let screenshotSize:CGSize = CGSize(width: 160, height: 160)
+    let screenshotSize:CGSize = CGSize(width: 100, height: 100)
     var body: some View {
         
         HStack {

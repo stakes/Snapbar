@@ -5,7 +5,7 @@
 //  Created by Jay Stakelon on 9/6/20.
 //  Copyright © 2020 Jay Stakelon. All rights reserved.
 //
-
+ 
 import SwiftUI
 
 struct ScreenshotListView: View {
@@ -17,12 +17,12 @@ struct ScreenshotListView: View {
                     Text("📸").font(.system(size: 36, weight: .regular, design: .default)).padding(.bottom, 2)
                     Text("Take some screenshots")
                     Text("And they'll show up here")
-                }.frame(width: 200, height: 180)
+                }.frame(width: 120, height: 100)
             } else {
                 VStack {
                     ForEach(self.viewModel.screenshots.reversed()) { screenshot in
                         ScreenshotView(viewModel: ScreenshotViewModel(screenshot: screenshot))
-                            .frame(width: 200)
+                            .frame(width: 120)
                     }
                 }
             }
