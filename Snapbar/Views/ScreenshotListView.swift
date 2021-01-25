@@ -15,8 +15,8 @@ struct ScreenshotListView: View {
             if (self.viewModel.screenshots.count == 0) {
                 VStack {
                     Text("📸").font(.system(size: 36, weight: .regular, design: .default)).padding(.bottom, 2)
-                    Text("Take some screenshots")
-                    Text("And they'll show up here")
+                    Text("Take screenshots")
+                    Text("And find them here")
                 }.frame(width: 120, height: 100)
             } else {
                 VStack {

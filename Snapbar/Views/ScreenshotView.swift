@@ -53,9 +53,7 @@ struct ScreenshotView: View {
                 .padding(4)
                 .background(Color("HighlightColor").opacity(isHover ? 1 : 0))
                 .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
-                .animation(.linear(duration: 0.15))
-                
-            
+//                .animation(.linear(duration: 0.05))
             }
         }
     }

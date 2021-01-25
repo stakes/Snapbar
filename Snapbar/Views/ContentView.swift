@@ -14,7 +14,9 @@ struct ContentView: View {
         VStack(alignment: .leading) {
             HeaderView(viewModel: viewModel)
             ScreenshotListView(viewModel: viewModel)
-                .padding(.top, -8)
+                .padding(.top, 4)
+                .padding(.leading, 12)
+                .padding(.bottom, 12)
 //
         }
     }
