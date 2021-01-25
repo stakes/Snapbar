@@ -23,6 +23,7 @@ struct ScreenshotListView: View {
                     ForEach(self.viewModel.screenshots.reversed()) { screenshot in
                         ScreenshotView(viewModel: ScreenshotViewModel(screenshot: screenshot))
                             .frame(width: 120)
+//                            .focusable()
                     }
                 }
             }

@@ -45,7 +45,7 @@ struct ScreenshotView: View {
 //                        .animation(Animation.easeOut.delay(0.1))
                 }.onHover { hover in
                     self.isHover = hover
-                }.focusable()
+                }
                 .frame(width: screenshotSize.width, height: screenshotSize.height)
                 .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
                 .padding(4)

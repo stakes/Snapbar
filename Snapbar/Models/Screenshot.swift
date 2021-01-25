@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Screenshot: Codable, Identifiable  {
+struct Screenshot: Codable, Identifiable, Hashable  {
     let id: UUID = UUID()
     let url: URL
     let createdAt: Date
