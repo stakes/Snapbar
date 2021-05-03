@@ -17,7 +17,7 @@ class ScreenshotListViewModel: ObservableObject {
         // whenever this changes
         willSet {
             // resize
-        }
+        } 
     }
     
     let listMax:Int = 5 // maybe make this configurable someday
