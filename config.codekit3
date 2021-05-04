@@ -101,9 +101,9 @@
     "\/source\/assets\/snapbar-16x16.png" : {
       "ft" : 32768,
       "iS" : 694,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/docs\/assets\/snapbar-16x16.png",
-      "oF" : 0,
+      "oF" : 1,
       "oIPL" : 0,
       "opt" : 1,
       "oT" : 1,
@@ -114,9 +114,9 @@
     "\/source\/assets\/snapbar-32x32.png" : {
       "ft" : 32768,
       "iS" : 1636,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/docs\/assets\/snapbar-32x32.png",
-      "oF" : 0,
+      "oF" : 1,
       "oIPL" : 0,
       "opt" : 1,
       "oT" : 1,
@@ -129,7 +129,7 @@
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/docs\/assets\/snapbar-icon.svg",
-      "oF" : 0,
+      "oF" : 1,
       "opt" : 0,
       "plM" : 52780316221407,
       "prP" : 0
@@ -186,7 +186,7 @@
     "displayValueWasSetByUser" : 1,
     "iconImageName" : "brackets_teal",
     "iconImageWasSetByUser" : 1,
-    "lastBuiltDate" : 641786995.38525498
+    "lastBuiltDate" : 641796618.75899398
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
