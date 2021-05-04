@@ -98,6 +98,42 @@
       "oAP" : "\/docs\/Snapbar.xcodeproj\/project.xcworkspace\/xcuserdata\/stakelon.xcuserdatad\/UserInterfaceState.xcuserstate",
       "oF" : 0
     },
+    "\/source\/assets\/snapbar-16x16.png" : {
+      "ft" : 32768,
+      "iS" : 694,
+      "oA" : 0,
+      "oAP" : "\/docs\/assets\/snapbar-16x16.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/source\/assets\/snapbar-32x32.png" : {
+      "ft" : 32768,
+      "iS" : 1636,
+      "oA" : 0,
+      "oAP" : "\/docs\/assets\/snapbar-32x32.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/source\/assets\/snapbar-icon.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/docs\/assets\/snapbar-icon.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/source\/css\/main.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -126,42 +162,6 @@
       "oAP" : "\/docs\/index.html",
       "oF" : 0
     },
-    "\/source\/snapbar-16x16.png" : {
-      "ft" : 32768,
-      "iS" : 694,
-      "oA" : 0,
-      "oAP" : "\/docs\/snapbar-16x16.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 1,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/source\/snapbar-32x32.png" : {
-      "ft" : 32768,
-      "iS" : 1636,
-      "oA" : 0,
-      "oAP" : "\/docs\/snapbar-32x32.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 1,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/source\/snapbar-icon.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/docs\/snapbar-icon.svg",
-      "oF" : 0,
-      "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
-    },
     "\/tailwind.config.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -186,7 +186,7 @@
     "displayValueWasSetByUser" : 1,
     "iconImageName" : "brackets_teal",
     "iconImageWasSetByUser" : 1,
-    "lastBuiltDate" : 641786722.24152195
+    "lastBuiltDate" : 641786995.38525498
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
