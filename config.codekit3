@@ -110,32 +110,6 @@
       "oF" : 1,
       "pg" : 2
     },
-    "\/source\/favicon-16x16.png" : {
-      "ft" : 32768,
-      "iS" : 1029,
-      "oA" : 0,
-      "oAP" : "\/docs\/favicon-16x16.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 1,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/source\/favicon-32x32.png" : {
-      "ft" : 32768,
-      "iS" : 1295,
-      "oA" : 0,
-      "oAP" : "\/docs\/favicon-32x32.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 1,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
     "\/source\/favicon.ico" : {
       "cB" : 0,
       "ft" : 8192,
@@ -152,18 +126,41 @@
       "oAP" : "\/docs\/index.html",
       "oF" : 0
     },
-    "\/source\/logo.jpg" : {
-      "ft" : 16384,
-      "iS" : 18893,
-      "jF" : 0,
+    "\/source\/snapbar-16x16.png" : {
+      "ft" : 32768,
+      "iS" : 694,
       "oA" : 0,
-      "oAP" : "\/docs\/logo.jpg",
+      "oAP" : "\/docs\/snapbar-16x16.png",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
+      "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
+    },
+    "\/source\/snapbar-32x32.png" : {
+      "ft" : 32768,
+      "iS" : 1636,
+      "oA" : 0,
+      "oAP" : "\/docs\/snapbar-32x32.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/source\/snapbar-icon.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/docs\/snapbar-icon.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
     },
     "\/tailwind.config.js" : {
       "bF" : 0,
@@ -187,9 +184,9 @@
     "creationDate" : 641782876.48792803,
     "displayValue" : "Snapbar",
     "displayValueWasSetByUser" : 1,
-    "iconImageName" : "\/source\/logo.jpg",
+    "iconImageName" : "brackets_teal",
     "iconImageWasSetByUser" : 1,
-    "lastBuiltDate" : 641782963.13622296
+    "lastBuiltDate" : 641786722.24152195
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
@@ -483,7 +480,7 @@
     "bowerUseExactVersion" : 0,
     "browserRefreshDelay" : 0,
     "browserslistString" : ">0.2%, last 2 versions, Firefox ESR, not dead",
-    "buildEnvironment" : 1,
+    "buildEnvironment" : 0,
     "buildFolderActive" : 1,
     "buildFolderName" : "docs",
     "cleanBuild" : 1,
@@ -628,7 +625,7 @@
     "cssoForceMediaMerge" : 0,
     "cssoRestructure" : 1,
     "environmentVariableEntries" : [
-      "NODE_ENV:::development"
+      "NODE_ENV:::production"
     ],
     "esLintConfigFileHandlingType" : 0,
     "esLintECMAVersion" : 7,
