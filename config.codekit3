@@ -98,6 +98,19 @@
       "oAP" : "\/docs\/Snapbar.xcodeproj\/project.xcworkspace\/xcuserdata\/stakelon.xcuserdatad\/UserInterfaceState.xcuserstate",
       "oF" : 0
     },
+    "\/source\/assets\/app-placeholder.png" : {
+      "ft" : 32768,
+      "iS" : 3758,
+      "oA" : 0,
+      "oAP" : "\/docs\/assets\/app-placeholder.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/source\/assets\/snapbar-16x16.png" : {
       "ft" : 32768,
       "iS" : 694,
@@ -186,7 +199,7 @@
     "displayValueWasSetByUser" : 1,
     "iconImageName" : "brackets_teal",
     "iconImageWasSetByUser" : 1,
-    "lastBuiltDate" : 641796618.75899398
+    "lastBuiltDate" : 642050919.01953304
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
@@ -480,7 +493,7 @@
     "bowerUseExactVersion" : 0,
     "browserRefreshDelay" : 0,
     "browserslistString" : ">0.2%, last 2 versions, Firefox ESR, not dead",
-    "buildEnvironment" : 0,
+    "buildEnvironment" : 1,
     "buildFolderActive" : 1,
     "buildFolderName" : "docs",
     "cleanBuild" : 1,
@@ -625,7 +638,7 @@
     "cssoForceMediaMerge" : 0,
     "cssoRestructure" : 1,
     "environmentVariableEntries" : [
-      "NODE_ENV:::production"
+      "NODE_ENV:::development"
     ],
     "esLintConfigFileHandlingType" : 0,
     "esLintECMAVersion" : 7,
