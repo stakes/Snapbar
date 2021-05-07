@@ -103,7 +103,7 @@
       "iS" : 3758,
       "oA" : 0,
       "oAP" : "\/docs\/assets\/app-placeholder.png",
-      "oF" : 0,
+      "oF" : 1,
       "oIPL" : 0,
       "opt" : 1,
       "oT" : 1,
@@ -114,7 +114,7 @@
     "\/source\/assets\/snapbar-16x16.png" : {
       "ft" : 32768,
       "iS" : 694,
-      "oA" : 2,
+      "oA" : 0,
       "oAP" : "\/docs\/assets\/snapbar-16x16.png",
       "oF" : 1,
       "oIPL" : 0,
@@ -127,7 +127,7 @@
     "\/source\/assets\/snapbar-32x32.png" : {
       "ft" : 32768,
       "iS" : 1636,
-      "oA" : 2,
+      "oA" : 0,
       "oAP" : "\/docs\/assets\/snapbar-32x32.png",
       "oF" : 1,
       "oIPL" : 0,
@@ -140,10 +140,10 @@
     "\/source\/assets\/snapbar-icon.svg" : {
       "ft" : 2097152,
       "miP" : 0,
-      "oA" : 2,
+      "oA" : 0,
       "oAP" : "\/docs\/assets\/snapbar-icon.svg",
       "oF" : 1,
-      "opt" : 0,
+      "opt" : 1,
       "plM" : 52780316221407,
       "prP" : 0
     },
@@ -199,7 +199,7 @@
     "displayValueWasSetByUser" : 1,
     "iconImageName" : "brackets_teal",
     "iconImageWasSetByUser" : 1,
-    "lastBuiltDate" : 642057191.400226
+    "lastBuiltDate" : 642057367.77754295
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
