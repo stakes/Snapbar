@@ -25,6 +25,6 @@ When you launch Snapbar it'll take up residence in your menu bar.
 
 The first time you take a screenshot with Snapbar running, it'll ask you to allow it to access files in your Desktop folder. It needs this access to grab screenshots and move them for you.
 
-Whenever Snapbar is running, it'll be watching for new screenshots. It intervenes behind the scenes whenever your Mac tries to put a new screenshot on the desktop. This means you can still use those little floating screenshot thumbnails that MacOS creates; bu instead of them "sliding off" onto your desktop, they'll "slide off" into Snapbar.
+Whenever Snapbar is running, it'll be watching for new screenshots. It intervenes behind the scenes whenever your Mac tries to put a new screenshot on the desktop. This means you can still use those little floating screenshot thumbnails that MacOS creates; but instead of them "sliding off" onto your desktop, they'll "slide off" into Snapbar.
 
 You can then grab screenshots and use them from Snapbar's tray, as well as in the Finder in `Documents/Snapbar`.
