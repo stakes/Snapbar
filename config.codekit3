@@ -35,7 +35,7 @@
       "ft" : 16,
       "ma" : 3,
       "oA" : 1,
-      "oAP" : "\/build\/node_modules\/tailwindcss\/base.css",
+      "oAP" : "\/docs\/node_modules\/tailwindcss\/base.css",
       "oF" : 0,
       "pg" : 2
     },
@@ -47,7 +47,7 @@
       "ft" : 16,
       "ma" : 3,
       "oA" : 1,
-      "oAP" : "\/build\/node_modules\/tailwindcss\/components.css",
+      "oAP" : "\/docs\/node_modules\/tailwindcss\/components.css",
       "oF" : 0,
       "pg" : 2
     },
@@ -59,7 +59,7 @@
       "ft" : 16,
       "ma" : 3,
       "oA" : 1,
-      "oAP" : "\/build\/node_modules\/tailwindcss\/utilities.css",
+      "oAP" : "\/docs\/node_modules\/tailwindcss\/utilities.css",
       "oF" : 0,
       "pg" : 2
     },
@@ -89,6 +89,14 @@
       "oF" : 1,
       "sC" : 3,
       "tS" : 0
+    },
+    "\/Snapbar.xcodeproj\/project.xcworkspace\/xcshareddata\/IDEWorkspaceChecks.plist" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/docs\/Snapbar.xcodeproj\/project.xcworkspace\/xcshareddata\/IDEWorkspaceChecks.plist",
+      "oF" : 0
     },
     "\/Snapbar.xcodeproj\/project.xcworkspace\/xcuserdata\/stakelon.xcuserdatad\/UserInterfaceState.xcuserstate" : {
       "cB" : 0,
@@ -147,6 +155,19 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/source\/assets\/snapbar-img.png" : {
+      "ft" : 32768,
+      "iS" : 249942,
+      "oA" : 0,
+      "oAP" : "\/docs\/assets\/snapbar-img.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/source\/css\/main.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -199,7 +220,7 @@
     "displayValueWasSetByUser" : 1,
     "iconImageName" : "brackets_teal",
     "iconImageWasSetByUser" : 1,
-    "lastBuiltDate" : 642057367.77754295
+    "lastBuiltDate" : 642308851.62683105
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
