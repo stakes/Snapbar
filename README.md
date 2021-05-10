@@ -11,7 +11,7 @@ It has a quiet but firm opinion that most of us really only need the last few sc
 
 ### Get Snapbar
 
-Download and unzip the app, then put it into your Applications folder.
+[Download](https://github.com/stakes/Snapbar/releases/download/1.0-alpha/Snapbar.zip) and unzip the app, then put it into your Applications folder.
 
 ### What it does
 
