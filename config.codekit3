@@ -160,7 +160,7 @@
       "iS" : 249942,
       "oA" : 0,
       "oAP" : "\/docs\/assets\/snapbar-img.png",
-      "oF" : 0,
+      "oF" : 1,
       "oIPL" : 0,
       "opt" : 1,
       "oT" : 1,
@@ -220,7 +220,7 @@
     "displayValueWasSetByUser" : 1,
     "iconImageName" : "brackets_teal",
     "iconImageWasSetByUser" : 1,
-    "lastBuiltDate" : 642308851.62683105
+    "lastBuiltDate" : 642397339.924101
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
