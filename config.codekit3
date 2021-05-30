@@ -84,12 +84,12 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/source\/assets\/app-placeholder.png" : {
+    "\/source\/android-chrome-192x192.png" : {
       "ft" : 32768,
-      "iS" : 3758,
+      "iS" : 23001,
       "oA" : 0,
-      "oAP" : "\/docs\/assets\/app-placeholder.png",
-      "oF" : 1,
+      "oAP" : "\/docs\/android-chrome-192x192.png",
+      "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
       "oT" : 1,
@@ -97,12 +97,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/source\/assets\/snapbar-16x16.png" : {
+    "\/source\/android-chrome-384x384.png" : {
       "ft" : 32768,
-      "iS" : 694,
+      "iS" : 98416,
       "oA" : 0,
-      "oAP" : "\/docs\/assets\/snapbar-16x16.png",
-      "oF" : 1,
+      "oAP" : "\/docs\/android-chrome-384x384.png",
+      "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
       "oT" : 1,
@@ -110,15 +110,51 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/source\/assets\/snapbar-32x32.png" : {
+    "\/source\/apple-touch-icon.png" : {
       "ft" : 32768,
-      "iS" : 1636,
+      "iS" : 20274,
       "oA" : 0,
-      "oAP" : "\/docs\/assets\/snapbar-32x32.png",
-      "oF" : 1,
+      "oAP" : "\/docs\/apple-touch-icon.png",
+      "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
       "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/source\/assets\/GitHub-Mark.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/docs\/assets\/GitHub-Mark.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/source\/assets\/snapbar-1024x512.jpg" : {
+      "ft" : 16384,
+      "iS" : 85434,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/docs\/assets\/snapbar-1024x512.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/source\/assets\/snapbar-1024x1024.jpg" : {
+      "ft" : 16384,
+      "iS" : 137691,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/docs\/assets\/snapbar-1024x1024.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -159,6 +195,14 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/source\/browserconfig.xml" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/docs\/browserconfig.xml",
+      "oF" : 0
+    },
     "\/source\/css\/main.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -170,6 +214,32 @@
       "oAP" : "\/docs\/css\/main.css",
       "oF" : 1,
       "pg" : 2
+    },
+    "\/source\/favicon-16x16.png" : {
+      "ft" : 32768,
+      "iS" : 1544,
+      "oA" : 0,
+      "oAP" : "\/docs\/favicon-16x16.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/source\/favicon-32x32.png" : {
+      "ft" : 32768,
+      "iS" : 1848,
+      "oA" : 0,
+      "oAP" : "\/docs\/favicon-32x32.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/source\/favicon.ico" : {
       "cB" : 0,
@@ -185,6 +255,27 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/docs\/index.html",
+      "oF" : 0
+    },
+    "\/source\/mstile-150x150.png" : {
+      "ft" : 32768,
+      "iS" : 10334,
+      "oA" : 0,
+      "oAP" : "\/docs\/mstile-150x150.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/source\/site.webmanifest" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/docs\/site.webmanifest",
       "oF" : 0
     },
     "\/tailwind.config.js" : {
@@ -211,7 +302,7 @@
     "displayValueWasSetByUser" : 1,
     "iconImageName" : "brackets_teal",
     "iconImageWasSetByUser" : 1,
-    "lastBuiltDate" : 642818419.46598804
+    "lastBuiltDate" : 644097115.53313196
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
