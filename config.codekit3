@@ -126,10 +126,10 @@
     "\/source\/assets\/GitHub-Mark.svg" : {
       "ft" : 2097152,
       "miP" : 0,
-      "oA" : 2,
+      "oA" : 0,
       "oAP" : "\/docs\/assets\/GitHub-Mark.svg",
-      "oF" : 0,
-      "opt" : 0,
+      "oF" : 1,
+      "opt" : 1,
       "plM" : 52780316221407,
       "prP" : 0
     },
@@ -139,7 +139,7 @@
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/docs\/assets\/snapbar-1024x512.jpg",
-      "oF" : 0,
+      "oF" : 1,
       "oIPL" : 0,
       "opt" : 1,
       "ou" : "lpckwebp-none",
@@ -152,7 +152,7 @@
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/docs\/assets\/snapbar-1024x1024.jpg",
-      "oF" : 0,
+      "oF" : 1,
       "oIPL" : 0,
       "opt" : 1,
       "ou" : "lpckwebp-none",
@@ -302,7 +302,7 @@
     "displayValueWasSetByUser" : 1,
     "iconImageName" : "brackets_teal",
     "iconImageWasSetByUser" : 1,
-    "lastBuiltDate" : 644097115.53313196
+    "lastBuiltDate" : 644098830.71727097
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
@@ -596,7 +596,7 @@
     "bowerUseExactVersion" : 0,
     "browserRefreshDelay" : 0,
     "browserslistString" : ">0.2%, last 2 versions, Firefox ESR, not dead",
-    "buildEnvironment" : 0,
+    "buildEnvironment" : 1,
     "buildFolderActive" : 1,
     "buildFolderName" : "docs",
     "cleanBuild" : 1,
@@ -741,7 +741,7 @@
     "cssoForceMediaMerge" : 0,
     "cssoRestructure" : 1,
     "environmentVariableEntries" : [
-      "NODE_ENV:::production"
+      "NODE_ENV:::development"
     ],
     "esLintConfigFileHandlingType" : 0,
     "esLintECMAVersion" : 7,
